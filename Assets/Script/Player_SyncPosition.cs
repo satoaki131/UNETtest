@@ -12,9 +12,16 @@ public class Player_SyncPosition : NetworkBehaviour {
     [SerializeField]
     Transform myTransform;
 
-    //Leap:２ベクトル間を補完する
+    //Leap:２ベクトルの間を補完する
     [SerializeField]
     float leapRate = 15;
+
+    //前フレームの最終位置
+    private Vector3 lastPos;
+
+    //threshold:しきい値、境目となる値のこと
+    //0.5unitを越えなければ移動していないこととする
+    private float threshold = 0.5f;
 
     void FixedUpdate()
     {
@@ -44,9 +51,10 @@ public class Player_SyncPosition : NetworkBehaviour {
     //位置情報を送るメソッド
     private void TransmitPosition()
     {
-        if(isLocalPlayer)
+        if(isLocalPlayer && Vector3.Distance(myTransform.position, lastPos) > threshold)
         {
             CmdProvidePositionToServer(myTransform.position);
+            lastPos = myTransform.position;
         }
     }
 }

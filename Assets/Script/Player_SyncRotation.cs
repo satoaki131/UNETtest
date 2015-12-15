@@ -20,6 +20,10 @@ public class Player_SyncRotation : NetworkBehaviour {
     [SerializeField]
     private float leapRate = 15;
 
+    private Quaternion lastPlayerRot;
+    private Quaternion lastCamRot;
+    private float threshold = 5; //しきい値は5度以上 
+
 	void FixedUpdate ()
     {
         //クライアントと側のPlayerの角度を所得
@@ -56,7 +60,14 @@ public class Player_SyncRotation : NetworkBehaviour {
     {
         if(isLocalPlayer)
         {
-            CmdProvideRotationsToServer(playerTransform.rotation, camTransform.rotation);
+            if(Quaternion.Angle(playerTransform.rotation, lastPlayerRot) > threshold ||
+               Quaternion.Angle(camTransform.rotation, lastCamRot) > threshold)
+            {
+                CmdProvideRotationsToServer(playerTransform.rotation, camTransform.rotation);
+
+                lastPlayerRot = playerTransform.rotation;
+                lastCamRot = camTransform.rotation;
+            }
         }
     }
 }
