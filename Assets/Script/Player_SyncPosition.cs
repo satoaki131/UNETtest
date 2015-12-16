@@ -23,10 +23,14 @@ public class Player_SyncPosition : NetworkBehaviour {
     //0.5unitを越えなければ移動していないこととする
     private float threshold = 0.5f;
 
+    void Update()
+    {
+        LeapPosition();
+    }
+
     void FixedUpdate()
     {
         TransmitPosition();
-        LeapPosition();
     }
 
     //ポジション補完用メソッド

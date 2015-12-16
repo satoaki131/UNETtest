@@ -15,7 +15,7 @@ public class Player_NetworkSetup : NetworkBehaviour {
 	    if(isLocalPlayer)
         {
             GameObject.Find("SceneCamera").SetActive(false);
-            GetComponent<CharacterController>().enabled = true;
+            //GetComponent<CharacterController>().enabled = true;
             GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
             FPSCharacterCam.enabled = true;
             audioListener.enabled = true;

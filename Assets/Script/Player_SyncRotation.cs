@@ -24,13 +24,17 @@ public class Player_SyncRotation : NetworkBehaviour {
     private Quaternion lastCamRot;
     private float threshold = 5; //しきい値は5度以上 
 
-	void FixedUpdate ()
+    void Update()
+    {
+        //現在角度と所得した角度を補完する
+        LeapRotations();
+    }
+
+    void FixedUpdate ()
     {
         //クライアントと側のPlayerの角度を所得
         TransmitRotations();
-        //現在角度と所得した角度を補完する
-        LeapRotations();
-	}
+    }
     
     //角度を補完するメソッド
     private void LeapRotations()

@@ -16,19 +16,36 @@ Platform assembly: C:\Users\vantan2\Documents\UNETtest\NetTest_Data\Managed\Unit
 Loading C:\Users\vantan2\Documents\UNETtest\NetTest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\vantan2\Documents\UNETtest\NetTest_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\vantan2\Documents\UNETtest\NetTest_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.201 seconds
+- Completed reload, in  0.217 seconds
 Platform assembly: C:\Users\vantan2\Documents\UNETtest\NetTest_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\vantan2\Documents\UNETtest\NetTest_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.593584 ms
+UnloadTime: 1.763645 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2140 -> priority: 1 
+  Thread -> id: 1fc0 -> priority: 1 
+network simulation allowed only for editor or developer build or in debug mode only
+ 
+(Filename:  Line: 511)
+
+network simulation allowed only for editor or developer build or in debug mode only
+ 
+(Filename:  Line: 511)
+
+network simulation allowed only for editor or developer build or in debug mode only
+ 
+(Filename:  Line: 511)
+
+network simulation allowed only for editor or developer build or in debug mode only
+ 
+(Filename:  Line: 511)
+
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.280541 ms
+UnloadTime: 0.597005 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 296.
-Total: 0.206414 ms (FindLiveObjects: 0.019386 ms CreateObjectMapping: 0.017676 ms MarkObjects: 0.163649 ms  DeleteObjects: 0.005702 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 292.
+Total: 0.316463 ms (FindLiveObjects: 0.019386 ms CreateObjectMapping: 0.041054 ms MarkObjects: 0.248039 ms  DeleteObjects: 0.007412 ms)
 
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:60818}
